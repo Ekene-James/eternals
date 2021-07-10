@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Carousel from '../component/carousel/Carousel'
 import Effortless from '../component/effortless/Effortless'
 import TrueFurniture from '../component/truefurniture/TrueFurniture'
-import BrowseCollections from '../component/BrowseCollections.js/BrowseCollections'
+import BrowseCollections from '../component/browseCollections.js/BrowseCollections'
 import ViewEverything from '../component/viewEverything/ViewEverything'
 import NewsLetter from '../component/newsLetter/Newsletter'
 
