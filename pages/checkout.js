@@ -2,7 +2,7 @@ import React from "react"
 import {useRouter} from 'next/router'
 
 import {  usePaystackPayment } from 'react-paystack';
-import { AppStoreContext } from "../store/appStore";
+import { AppStoreContext } from "../store/AppStore";
 import { makeStyles,Paper , Button,TextField,  } from '@material-ui/core';
 import { clearCart } from "../store/actions/AppAction";
 const useStyles = makeStyles((theme) => ({
