@@ -6,7 +6,7 @@ import EmailIcon from '@material-ui/icons/Email';
 
 import { makeStyles, Grid,Typography,TextField,Button } from '@material-ui/core';
 import OnScreenObserver from '../../observerHook';
-import { AppStoreContext } from '../../store/appStore';
+import { AppStoreContext } from '../../store/AppStore';
 import { getFooter } from '../../store/actions/AppAction';
 
 const useStyles = makeStyles((theme) => ({

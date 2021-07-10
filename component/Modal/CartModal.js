@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles,Button,ButtonGroup } from '@material-ui/core';
-import { AppStoreContext } from '../../store/appStore';
+import { AppStoreContext } from '../../store/AppStore';
 import { removeFromCart,reduceFromCart,addToCart } from '../../store/actions/AppAction';
 import Link from 'next/link';
 import AddIcon from '@material-ui/icons/Add';

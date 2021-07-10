@@ -3,7 +3,7 @@ import {addToCart} from '../../store/actions/AppAction'
 import Head from 'next/head'
 import { makeStyles, Grid,Typography,Hidden } from '@material-ui/core';
 import CollectionSideBar from '../../component/collectionSidebar/CollectionSideBar';
-import { AppStoreContext } from '../../store/appStore';
+import { AppStoreContext } from '../../store/AppStore';
 import Cards from '../../component/card/Cards';
 import Modal from '../../component/Modal';
 import ModalContent from '../../component/Modal/ModalContent';

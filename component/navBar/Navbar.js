@@ -18,7 +18,7 @@ import ScheduleIcon from '@material-ui/icons/Schedule';
 import CartModal from '../Modal/CartModal';
 
 import { Button,Badge, Hidden } from '@material-ui/core';
-import { AppStoreContext } from '../../store/appStore';
+import { AppStoreContext } from '../../store/AppStore';
 
 
 const useStyles = makeStyles((theme) => ({
