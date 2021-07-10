@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
+import Link from 'next/link'
 
 const useStyles = makeStyles( (theme) => ({
     '@keyframes slideOver' : {
@@ -272,10 +273,12 @@ function Carousel() {
                     <Typography className={ i === active ? classes.preTitle : ''} variant="subtitle2" gutterBottom>
                        {data.preTitle}
                     </Typography>
+                    <Link href='/collections'>
                     <Button className={clsx(classes.btn, {
                         [classes.activeBtn] : i === active 
                         
                       })} variant="contained">Shop Now</Button>
+                    </Link>
     
                     </div>
     

@@ -181,11 +181,13 @@ function CartModal({handleClose}) {
            
        </div>
        <div style={{width:'50%',margin:'auto'}}>
+       <Link href='/checkout'>
        <Button onClick={handleClose} disabled={appCtx.state.cart.length === 0 } color="primary"
              style={{display: 'inline-block',width:'100%'}} 
             classes={{containedPrimary : classes.btn}} variant="contained">
-        <Link href='/checkout'>Checkout</Link>
+        checkout
         </Button>
+        </Link>
 
        </div>
         </div>
