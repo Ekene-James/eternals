@@ -1,6 +1,6 @@
 import Layout from '../component/layout/Layout'
 import '../styles/globals.css'
-import AppStoreContextProvider from '../store/AppStore'
+import AppStoreContextProvider from '../store/appStore'
 
 function MyApp({ Component, pageProps }) {
   return <AppStoreContextProvider>

@@ -3,7 +3,7 @@ import { AppReducer } from './reducers/AppReducer';
 
 export const AppStoreContext = createContext();
 
-export default function AppStoreContextProvider (props){
+function AppStoreContextProvider (props){
  const initialState ={
      onFooter:false,
      cart : []
@@ -21,3 +21,4 @@ dispatch
         </AppStoreContext.Provider>
     )
 }
+export default AppStoreContextProvider
