@@ -92,7 +92,8 @@ const useStyles = makeStyles((theme) => ({
       flexDirection:'column',
       alignItems:'center',
       height:'100%',
-      width:'100%'
+      width:'100%',
+      fontFamily: 'Cormorant Infant,-apple-system',
     },
     total: {
       display:'flex',
@@ -112,6 +113,8 @@ const useStyles = makeStyles((theme) => ({
         alignItems:'center',
         height:'100%',
         width:'100%',
+        fontFamily: 'Cormorant Infant,-apple-system',
+        fontWeight:'bold',
        
     },
   }));

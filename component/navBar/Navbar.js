@@ -52,6 +52,7 @@ const useStyles = makeStyles((theme) => ({
   },
   title:{
     fontFamily: 'Cormorant Infant,-apple-system',
+    fontWeight:'bold'
   },
   inner:{
     display: 'flex !important',
@@ -84,7 +85,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     alignItems : 'space-between',
     [theme.breakpoints.down('sm')]: {
-      top: '4px',
+      top: '7px',
       height:'10vw',
     },
   
@@ -112,7 +113,7 @@ const useStyles = makeStyles((theme) => ({
   },
   link:{
     marginBottom: '8px',
-    fontSize:'larger !important'
+   
   },
 
   inputRoot: {
@@ -216,9 +217,9 @@ function Navbar() {
           <div className={classes.inner}>
           <Hidden smDown>
              
-              <Link className={classes.link}  href="/">Home</Link>
-              <Link  className={classes.link}  href="/collections">Collections</Link>
-              <Link className={classes.link}  href="/about">About</Link>
+              <Link className={classes.link}  href="/"><h3 style={{cursor:'pointer'}}>Home</h3></Link>
+              <Link  className={classes.link}  href="/collections"><h3 style={{cursor:'pointer'}}>Collections</h3></Link>
+              <Link className={classes.link}  href="/about"><h3 style={{cursor:'pointer'}}>About</h3></Link>
               
         </Hidden>
         </div>

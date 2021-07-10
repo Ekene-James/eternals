@@ -134,7 +134,7 @@ function Effortless() {
     //mobile view
     React.useMemo(() => {
         
-            if (isIntersecting && direction === 'down' && mobileSpeed1 < 300) {
+            if (isIntersecting && direction === 'down' && mobileSpeed1 < 180) {
                  mobileSpeed1++
                }else if(isIntersecting && direction === 'up' && mobileSpeed1 > 5){
                  mobileSpeed1--

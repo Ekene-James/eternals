@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
 
   },
   nested: {
-    paddingLeft: theme.spacing(4),
+    paddingLeft: theme.spacing(10),
     fontSize: '15px',
     '&:hover' : {
      background: 'white'
@@ -37,7 +37,8 @@ const useStyles = makeStyles((theme) => ({
   },
 
   listItemText : {
-    fontSize: '18px'
+    fontSize: '18px',
+    fontFamily: 'Cormorant Infant,-apple-system',
   },
   icon: {
     fontSize: '15px'

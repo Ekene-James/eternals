@@ -107,7 +107,7 @@ function TrueFurniture() {
     //mobile view
     React.useMemo(() => {
         
-            if (isIntersecting && direction === 'down' && mobileSpeed < 300) {
+            if (isIntersecting && direction === 'down' && mobileSpeed < 180) {
                  mobileSpeed++
                }else if(isIntersecting && direction === 'up' && mobileSpeed > 5){
                  mobileSpeed--

@@ -24,6 +24,10 @@ const useStyles = makeStyles({
   },
   logo: {
     fontFamily: 'Cormorant Infant,-apple-system',
+    fontWeight: 'bold'
+  },
+  name: {
+    fontFamily: 'Cormorant Infant,-apple-system',
   },
   iconBtn :{
     color: 'black',
@@ -74,7 +78,7 @@ function SideBar(props) {
               button 
               >
                   <ListItemIcon >{item.icon}</ListItemIcon>
-                  <ListItemText secondary={item.name} />
+                  <ListItemText classes={{secondary:classes.name}} secondary={item.name} />
               </ListItem>
           </Link>
         ))}

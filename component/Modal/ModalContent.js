@@ -23,6 +23,8 @@ const useStyles = makeStyles((theme) => ({
       flexDirection:'column',
       width:'100%',
       marginLeft:'15px',
+      fontFamily: 'Cormorant Infant,-apple-system',
+      fontWeight:'bold',
      
     },
     img: {
