@@ -57,7 +57,7 @@ const useStyles = makeStyles((theme) => ({
         src={src}
         alt={'title'}
         width={300}
-        height='auto'
+        height={300}
         layout='responsive'
         />
         <div className={classes.content}>

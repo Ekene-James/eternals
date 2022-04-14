@@ -6,6 +6,7 @@ import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 import Link from 'next/link'
+import OnScreenObserver from '../../observerHook';
 
 const useStyles = makeStyles( (theme) => ({
     '@keyframes slideOver' : {
@@ -41,7 +42,8 @@ const useStyles = makeStyles( (theme) => ({
         }
     },
     container: {
-        overflowX : 'hidden',
+        overflow : 'hidden',
+        height: '100vh',
        
     },
     left: {
@@ -193,6 +195,8 @@ let intervals
 function Carousel() {
     const classes = useStyles();
     const [active, setactive] = useState(0);
+    const divRef = React.useRef(null);
+    const isIntersecting = OnScreenObserver(divRef,0.25);
 
     const left= () => {
         clearInterval(intervals)
@@ -237,12 +241,13 @@ function Carousel() {
  
 
     useEffect(() => {
-     intervals = setInterval(() => autoSlide(), 5000);
+        if(isIntersecting) intervals = setInterval(() => autoSlide(), 5000);
+    
             return () => clearInterval(intervals);
-        }, [])
+        }, [isIntersecting])
   
     return (
-        <div className={classes.container}>
+        <div className={classes.container} ref={divRef}>
             <div className={classes.hero}>
             <IconButton onClick={left} className={classes.left} aria-label="left">
                 <ArrowBackIosIcon />
@@ -293,7 +298,7 @@ function Carousel() {
                     data.map((data,i) => (
                     <FiberManualRecordIcon 
                         key={i}
-                        className={classes.activeDot}
+                     
                         className={clsx({[classes.activeDot] : i === active})}
                         onClick={() => dotClick(i)}
                      />

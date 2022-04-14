@@ -72,7 +72,7 @@ function Footer() {
     const appCtx = React.useContext(AppStoreContext);
     let isIntersecting = OnScreenObserver(footerRef,0.25);
 
-    React.useMemo(() => {
+    React.useEffect(() => {
         appCtx.dispatch(getFooter(isIntersecting))
        
 }, [isIntersecting])

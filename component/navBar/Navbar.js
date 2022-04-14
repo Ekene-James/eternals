@@ -224,7 +224,7 @@ function Navbar() {
         </Hidden>
         </div>
           <div style={{cursor : 'pointer'}} onClick={handleClick}>
-            <Badge classes={{colorPrimary : classes.badge }} badgeContent={cart} showZero={true} color="primary">
+            <Badge classes={{colorPrimary : classes.badge }} badgeContent={cart} showZero={true} color="primary" overlap="rectangular">
               <AddShoppingCartIcon />
             </Badge>
 
