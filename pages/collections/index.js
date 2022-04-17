@@ -145,9 +145,9 @@ function Collections() {
         </div>
         <Modal open={open} maxWidth='md' handleClose={handleClose} actions={[{handler:() => handleClose(),
                     text:"Close",id:5}]} title='Product Description'>
-                   <ModalContent item={item} AddToCart={AddToCart}/>
+                   <ModalContent item={item} AddToCart={AddToCart} close={handleClose}/>
           </Modal>
-        </div>
+        </div> 
         </>
     )
 }

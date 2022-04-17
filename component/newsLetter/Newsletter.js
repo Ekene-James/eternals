@@ -1,6 +1,8 @@
 import React from 'react'
 
 import { makeStyles, Grid,Typography,TextField,Button } from '@material-ui/core';
+import { AppStoreContext } from '../../store/AppStore';
+import { handleSnackBar, subNewsLetter } from '../../store/actions/AppAction';
 
 const useStyles = makeStyles((theme) => ({
 
@@ -27,12 +29,21 @@ const useStyles = makeStyles((theme) => ({
 function NewsLetter() {
     const classes = useStyles();
     const [email, setemail] = React.useState('')
+    const appCtx = React.useContext(AppStoreContext);
     const handleChange= (e) => {
       const {name,value} = e.target;
-      setemail({
-          name:value
-      })
+      setemail(value);
        
+    }
+    const handleSubscribe= () => {
+      const state ={
+        type:'error',
+        open:true,
+        msg:'Please input a valid Email'
+       }
+      if(email.length === 0) return appCtx.dispatch(handleSnackBar(state))
+      appCtx.dispatch(subNewsLetter())
+      setemail('');
     }
     return (
         <div className={classes.root}>
@@ -51,7 +62,7 @@ function NewsLetter() {
                     <TextField fullWidth name='email' value={email} label="Email" onChange={handleChange} />
                 </Grid>
                 <Grid className={classes.btn} item xs={12} md={4}>
-                <Button variant="contained" style={{background : 'black', color:'white',alignSelf:'flex-end',marginBottom:'0'}}>
+                <Button variant="contained" style={{background : 'black', color:'white',alignSelf:'flex-end',marginBottom:'0'}} onClick={handleSubscribe}>
                     Subscribe
                 </Button>
                 </Grid>

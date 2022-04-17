@@ -3,7 +3,7 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import EmailIcon from '@material-ui/icons/Email';
-
+import Link from 'next/link'
 import { makeStyles, Grid,Typography,TextField,Button } from '@material-ui/core';
 import OnScreenObserver from '../../observerHook';
 import { AppStoreContext } from '../../store/AppStore';
@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
   
     display:'flex',
     justifyContent:'center',
-    alignItems:'flex-start',
+    alignItems:'center',
    
     flexDirection:'column',
    
@@ -86,18 +86,29 @@ function Footer() {
                  ETERNALS.
                 </Typography>
                 <div className={classes.icons}>
-                    <FacebookIcon/>
-                    <InstagramIcon/>
-                    <TwitterIcon/>
-                    <EmailIcon/>
+                    <a  href='https://www.facebook.com' target='_blanck'>
+                        <FacebookIcon style={{cursor:'pointer'}}/>
+                    </a>
+                    <a  href='https://www.instagram.com' target='_blanck'>
+                    <InstagramIcon style={{cursor:'pointer'}}/>
+                    </a>
+                    <a  href='https://www.twitter.com' target='_blanck'>
+                        <TwitterIcon style={{cursor:'pointer'}}/>
+                    </a>
+                    <a  href='mailto:eternals@gmail.com' target='_blanck'>
+                        <EmailIcon style={{cursor:'pointer'}}/>
+                    </a>
                 </div>
              </div>
-             <Grid className={classes.txtContent} style={{marginTop:'50px'}} item xs={6} md={3}>
+             <Grid className={classes.txtContent} style={{marginTop:'50px'}} item xs={6} md={4}>
                 <Typography style={{textAlign:'center',color:'gray',marginBottom:'10px',}} variant="h5" gutterBottom>
                     SHOP
                 </Typography>
                 <Typography className={classes.txt} variant="body1" gutterBottom>
                     Chairs
+                </Typography>
+                <Typography className={classes.txt} variant="body1" gutterBottom>
+                    Ottomans
                 </Typography>
                 <Typography className={classes.txt} variant="body1" gutterBottom>
                     Sofas
@@ -108,12 +119,10 @@ function Footer() {
                 <Typography className={classes.txt} variant="body1" gutterBottom>
                     Light
                 </Typography>
-                <Typography className={classes.txt} variant="body1" gutterBottom>
-                    Ottomans
-                </Typography>
+                
              </Grid>
          
-             <Grid className={classes.txtContent} item xs={6} md={3}>
+             <Grid className={classes.txtContent} item xs={6} md={4}>
                 <Typography style={{textAlign:'center',marginBottom:'20px',color:'gray'}} variant="h5" gutterBottom>
                     NAVIGATE
                 </Typography>
@@ -128,28 +137,17 @@ function Footer() {
                 </Typography>
                 
              </Grid>
-             <Grid className={classes.txtContent} item xs={6} md={3}>
-                <Typography style={{textAlign:'center',marginBottom:'20px',color:'gray'}} variant="h5" gutterBottom>
-                    COMPANY
-                </Typography>
-                <Typography className={classes.txt} variant="body1" gutterBottom>
-                    Press
-                </Typography>
-                <Typography className={classes.txt} variant="body1" gutterBottom>
-                    Affiliates
-                </Typography>
-               
-             </Grid>
-             <Grid className={classes.txtContent} item xs={6} md={3}>
+         
+             <Grid className={classes.txtContent} item xs={6} md={4}>
                 <Typography style={{textAlign:'center',marginBottom:'20px',color:'gray'}} variant="h5" gutterBottom>
                     HELP
                 </Typography>
+                <Link className={classes.link} style={{cursor:'pointer'}}  href="/faq">
                 <Typography className={classes.txt} variant="body1" gutterBottom>
-                    FAQ
+                    FAQs
                 </Typography>
-                <Typography className={classes.txt} variant="body1" gutterBottom>
-                    Contact us
-                </Typography>
+                </Link>
+                
                
              </Grid>
         </Grid>

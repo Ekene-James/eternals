@@ -37,6 +37,7 @@ const useStyles = makeStyles((theme) => ({
     },
     h1: {
       wordBreak:'break-word',
+      fontSize:'100px',
       fontFamily: 'Cormorant Infant,-apple-system',
       [theme.breakpoints.down('sm')]: {
        fontSize:'60px'
@@ -117,11 +118,11 @@ function Effortless() {
     React.useEffect(() => {
         window.addEventListener('scroll', handleScroll,true);
 
-        return window.removeEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
        
    }, [])
  //pc view
-    React.useMemo(() => {
+    React.useEffect(() => {
         
             if (isIntersecting && direction === 'down' && speed1 < 150) {
                 speed1 = speed1 + 4 
@@ -132,7 +133,7 @@ function Effortless() {
     }, [prevScrollY1])
 
     //mobile view
-    React.useMemo(() => {
+    React.useEffect(() => {
         
             if (isIntersecting && direction === 'down' && mobileSpeed1 < 180) {
                  mobileSpeed1++

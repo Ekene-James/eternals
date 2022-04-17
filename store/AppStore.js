@@ -6,7 +6,12 @@ export const AppStoreContext = createContext();
 function AppStoreContextProvider (props){
  const initialState ={
      onFooter:false,
-     cart : []
+     cart : [],
+     snackBarObj:{
+        type:'',
+        open:false,
+        msg:''
+    },
  };
  const [state, dispatch] = React.useReducer(AppReducer, initialState);
 

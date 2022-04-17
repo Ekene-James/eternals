@@ -184,11 +184,11 @@ function Navbar() {
         <div className={classes.contact}>
             <>
               <CallIcon className={classes.icon}/>
-              <p>+234-5678910</p>
+              <p>+234-8187866412</p>
             </>|
             <>
               <LocationOnIcon className={classes.icon}/>
-              <p>5, Afia bus-stop</p>
+              <p>5, Afia bus-stop, Enugu</p>
             </>
         </div>
         <div className={classes.contact}>
@@ -220,6 +220,7 @@ function Navbar() {
               <Link className={classes.link}  href="/"><h3 style={{cursor:'pointer'}}>Home</h3></Link>
               <Link  className={classes.link}  href="/collections"><h3 style={{cursor:'pointer'}}>Collections</h3></Link>
               <Link className={classes.link}  href="/about"><h3 style={{cursor:'pointer'}}>About</h3></Link>
+              <Link className={classes.link}  href="/faq"><h3 style={{cursor:'pointer'}}>FAQs</h3></Link>
               
         </Hidden>
         </div>

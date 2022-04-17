@@ -58,6 +58,12 @@ export const AppReducer = (state, action) => {
             ...state,
             cart :clearItemFromcart(state.cart,action.payload)
         };
+        case "HANDLE_SNACK_BAR" : 
+        return {
+          ...state,
+          snackBarObj: action.payload
+        
+        };
 
         default : return state
    

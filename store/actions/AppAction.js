@@ -6,6 +6,12 @@ export const getFooter = (footer) => {
     }
         
     }
+    export const handleSnackBar = (state) => {
+        return {
+          type: 'HANDLE_SNACK_BAR',
+          payload: state
+        };
+      };
 export const addToCart = (item) => {
     return {
         type : 'ADD_TO_CART',
@@ -34,4 +40,21 @@ export const reduceFromCart = (item) => {
     }
         
     }
+export const subNewsLetter = () => {
+   const state ={
+    type:'success',
+    open:true,
+    msg:'Success'
+   }
+    return {
+        type: 'HANDLE_SNACK_BAR',
+        payload: state
+      };
+        
+    }
 
+    // dispatch(handleSnackBar({
+    //     type:'error',
+    //     open:true,
+    //     msg:user.data.message
+    //   }))

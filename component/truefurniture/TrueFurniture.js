@@ -88,11 +88,11 @@ function TrueFurniture() {
     React.useEffect(() => {
         window.addEventListener('scroll', handleScroll,true);
 
-        return window.removeEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
        
    }, [])
  //pc view
-    React.useMemo(() => {
+    React.useEffect(() => {
         
             if (isIntersecting && direction === 'down' && speed < 150) {
                 speed = speed + 4 
@@ -105,7 +105,7 @@ function TrueFurniture() {
     }, [prevScrollY])
 
     //mobile view
-    React.useMemo(() => {
+    React.useEffect(() => {
         
             if (isIntersecting && direction === 'down' && mobileSpeed < 180) {
                  mobileSpeed++

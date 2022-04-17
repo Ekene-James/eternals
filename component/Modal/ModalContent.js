@@ -52,6 +52,10 @@ function ModalContent(props) {
   
  
     const classes = useStyles();
+    const handleAddTocart = () => {
+      props.AddToCart()
+      props.close()
+    }
     return (
         <div  className={classes.container}>        
             <img
@@ -67,7 +71,7 @@ function ModalContent(props) {
                 </p>
                 <div  className={classes.price}>
                     <h3>${props?.item?.price}</h3>
-                    <Button color="primary" classes={{containedPrimary : classes.btn}} onClick={props.AddToCart} variant="contained">Add to Cart</Button>
+                    <Button color="primary" classes={{containedPrimary : classes.btn}} onClick={handleAddTocart} variant="contained">Add to Cart</Button>
                 </div>
             </div>
         </div>
