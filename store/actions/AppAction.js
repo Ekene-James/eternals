@@ -1,3 +1,4 @@
+import axios from "axios";
 
 export const getFooter = (footer) => {
     return {
@@ -50,6 +51,15 @@ export const subNewsLetter = () => {
         type: 'HANDLE_SNACK_BAR',
         payload: state
       };
+        
+    }
+export const storePaymentDetails = async (data) => {
+    try {
+        const details = await axios.post("https://eternals-node.vercel.app/api/storePayments",data)
+     console.log(details)
+    } catch (error) {
+        console.log(error)
+    }
         
     }
 

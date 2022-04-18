@@ -4,7 +4,7 @@ import {useRouter} from 'next/router'
 import {  usePaystackPayment } from 'react-paystack';
 import { AppStoreContext } from "../store/AppStore";
 import { makeStyles,Paper , Button,TextField,  } from '@material-ui/core';
-import { clearCart } from "../store/actions/AppAction";
+import { clearCart, storePaymentDetails } from "../store/actions/AppAction";
 const useStyles = makeStyles((theme) => ({
     paper: {
         padding: theme.spacing(2),
@@ -61,6 +61,7 @@ const Checkout = () => {
     phone : '1234567890',
     name:'John Doe'
 })
+
  
   const config = {
     email :state.email,
@@ -75,11 +76,21 @@ const Checkout = () => {
 }
 const onSuccess = (reference) => {
     // Implementation for whatever you want to do with reference and after success call.
-    
+    const data = {
+      name:state.name,
+      phone:state.phone,
+      email:state.email,
+      totalAmount:amount,
+      transactionReference:reference.reference,
+      paystackTransaction:reference.transaction,
+      itemsBought:appCtx.state.cart
+
+    }
     appCtx.dispatch(clearCart()) 
+    appCtx.dispatch(storePaymentDetails(data)) 
     router.push('/collections') 
-    const datas = {...reference}
-    console.log(reference)
+    //const datas = {...reference}
+    
    
   };
 
