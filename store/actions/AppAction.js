@@ -54,9 +54,12 @@ export const subNewsLetter = () => {
         
     }
 export const storePaymentDetails = async (data) => {
-    try {
+//     axios.defaults.headers.post['Content-Type'] ='application/x-www-form-urlencoded';
+try {
+      
         const details = await axios.post("https://eternals-node.vercel.app/api/storePayments",data)
-     console.log(details)
+    
+   //  console.log(details)
     } catch (error) {
         console.log(error)
     }
